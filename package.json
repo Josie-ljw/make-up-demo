@@ -1,24 +1,20 @@
 {
-  "name": "trading-web-demo",
+  "name": "make-up-demo",
   "private": true,
   "version": "0.0.0",
+  "type": "module",
   "engines": {
     "node": ">=22.0.0"
   },
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint ."
   },
   "dependencies": {
-    "@tanstack/react-virtual": "^3.13.24",
-    "i18next": "^26.0.10",
-    "lightweight-charts": "^5.2.0",
     "react": "^19.2.5",
-    "react-dom": "^19.2.5",
-    "react-i18next": "^17.0.7"
+    "react-dom": "^19.2.5"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

@@ -1,67 +1,58 @@
-# AI Trading Demo
+# 轻奢美妆小程序 Demo
 
-一个面向交易终端场景的前端演示项目，主打高密度信息展示、行情联动、K 线分析和 AI 辅助交互。
+面向场景化妆服务的**轻奢风小程序 Demo**，用于视觉验证、投资人预览与产品规划沟通。
 
-> 本项目仅用于 UI 与交互演示，不构成任何投资建议；行情、持仓、AI 回复与交易结果均为模拟数据。
+> 本项目仅用于 UI 与交互演示，所有案例、老师、价格与预约数据均为 Mock，不构成真实服务承诺。
+
+## 在线预览
+
+**https://josie-ljw.github.io/make-up-demo/**
 
 ## 项目特点
 
-- 多模块交易工作台：行情、自选、K 线、交易面板、资产概览、AI 助手
-- 强联动交互：切换标的、周期、主题时，相关模块同步更新
-- 高性能展示：行情虚拟列表、`memo` 优化、图表独立渲染
-- AI 交互模拟：支持上下文问答与分块输出
-- 多端适配：桌面端高密度布局，移动端纵向信息流
+- 5 个 Tab 页面：首页、案例、老师、预约、我的
+- 轻奢美妆行业视觉气质，区别于传统电商模板
+- 真实 Unsplash 人像图，增强审美信任感
+- 移动端友好，适合小程序风格预览
 
 ## 技术栈
 
-- `React 19` + `TypeScript`
-- `Vite`
-- `i18next` / `react-i18next`
-- `lightweight-charts`
-- `@tanstack/react-virtual`
+- React 19 + TypeScript
+- Vite 8
 
 ## 本地运行
 
 ```bash
 npm install
 npm run dev
+```
+
+本地开发默认 base 为 `/make-up-demo/`，访问：
+
+```
+http://localhost:5173/make-up-demo/
+```
+
+## 构建与预览
+
+```bash
 npm run build
 npm run preview
-npm run lint
 ```
 
-## 目录结构
+## 文档
 
-```text
-src/
-├── components/
-├── locales/
-├── styles/
-├── utils/
-└── ...
-```
+| 文档 | 说明 |
+|------|------|
+| [产品规划](./docs/product-planning.md) | 投资人沟通稿：商业模式、风险、前景 |
+| [详细页面 PRD](./docs/beauty-mini-program-detail-pages-prd.md) | 子页面结构与交互说明 |
 
-## 界面预览
+## 部署
 
-以下为生产构建（`npm run build && npm run preview`）下的整页截图，包含主工作台、资产看板、扩展分析区与底部免责声明。
+推送到 `main` 分支后，GitHub Actions 自动部署至 GitHub Pages。
 
-![AI Trading Demo 整页截图](./docs/screenshot.png)
-
-### 移动端预览
-
-窄屏（建议宽度 ≤ 768px）下会自动切换为纵向信息流布局；AI 助手以底部入口与居中弹窗呈现，更适合拇指操作。
-
-| 主工作台（行情 / K 线 / 交易区） | AI 助手弹窗 |
-| --- | --- |
-| ![移动端 · 主工作台](./docs/mobile-workbench.png) | ![移动端 · AI 助手弹窗](./docs/mobile-ai-modal.png) |
-
-## 预览与部署
-
-- 演示地址：`https://josie-ljw.github.io/trading-web-UI/`
-- 源码仓库：`github.com/Josie-ljw/trading-web-UI`
-
-部署到其他静态站点时，注意检查 `VITE_BASE` 配置是否正确。
+仓库地址：[github.com/Josie-ljw/make-up-demo](https://github.com/Josie-ljw/make-up-demo)
 
 ## 声明
 
-仅用于演示，不构成投资建议。
+Demo 仅供产品与视觉预览，不涉及真实交易。
