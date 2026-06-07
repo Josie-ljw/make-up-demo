@@ -988,3 +988,307 @@ select {
   }
 }
 
+/* ── 留念影像风格：暖纸感 · 作品叙事 · 底部 Tab ── */
+
+.beauty-route {
+  max-width: 430px;
+  padding: 0 0 24px;
+  background: #f3efe6;
+}
+
+body:has(.beauty-route) {
+  background: #f3efe6;
+}
+
+.memory-studio {
+  --memory-bg: #f3efe6;
+  --memory-paper: #fffdf8;
+  --memory-ink: #2c2420;
+  --memory-muted: #8a8278;
+  --memory-accent: #8b7355;
+  --memory-accent-soft: #d4c4b0;
+  --memory-line: rgba(44, 36, 32, 0.1);
+  --memory-serif: 'Noto Serif SC', 'Songti SC', 'STSong', Georgia, serif;
+  width: 100%;
+  min-height: 100vh;
+  padding: 16px 14px calc(76px + env(safe-area-inset-bottom, 0px));
+  background:
+    radial-gradient(circle at 20% 0%, rgba(212, 196, 176, 0.35), transparent 42%),
+    linear-gradient(180deg, #f7f3eb 0%, var(--memory-bg) 100%);
+  color: var(--memory-ink);
+}
+
+.memory-studio .beauty-main {
+  display: grid;
+  gap: 16px;
+}
+
+.memory-studio .beauty-topbar {
+  max-width: none;
+  padding: 4px 2px 12px;
+  border-bottom: 1px solid var(--memory-line);
+}
+
+.memory-studio .beauty-eyebrow,
+.memory-studio .eyebrow {
+  color: var(--memory-accent);
+  letter-spacing: 0.2em;
+  font-size: 0.68rem;
+  font-weight: 600;
+}
+
+.memory-studio .beauty-topbar h1 {
+  font-family: var(--memory-serif);
+  font-size: 1.45rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--memory-ink);
+}
+
+.memory-studio .memory-tabbar {
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: min(430px, 100%);
+  max-width: 100%;
+  margin: 0;
+  padding: 6px 8px calc(6px + env(safe-area-inset-bottom, 0px));
+  gap: 2px;
+  background: rgba(255, 253, 248, 0.96);
+  border-top: 1px solid var(--memory-line);
+  border-radius: 0;
+  box-shadow: 0 -8px 32px rgba(44, 36, 32, 0.06);
+  backdrop-filter: blur(16px);
+  z-index: 20;
+}
+
+.memory-studio .tab-chip {
+  flex: 1 1 0;
+  min-width: 0;
+  white-space: nowrap;
+  padding: 0.42rem 0.15rem;
+  font-size: 0.72rem;
+  line-height: 1.2;
+  border-radius: 0;
+  background: transparent;
+  color: var(--memory-muted);
+  box-shadow: none;
+  position: relative;
+}
+
+.memory-studio .tab-chip:hover {
+  transform: none;
+  color: var(--memory-ink);
+}
+
+.memory-studio .tab-chip.active {
+  background: transparent;
+  color: var(--memory-ink);
+  font-weight: 600;
+  box-shadow: none;
+}
+
+.memory-studio .tab-chip.active::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 2px;
+  width: 18px;
+  height: 2px;
+  border-radius: 1px;
+  background: var(--memory-accent);
+  transform: translateX(-50%);
+}
+
+.memory-studio .memory-hero {
+  min-height: 240px;
+  padding: 28px 18px 22px;
+  border-radius: 6px;
+  background-size: cover;
+  background-position: center;
+  color: #fffdf8;
+  box-shadow: 0 18px 48px rgba(44, 36, 32, 0.14);
+}
+
+.memory-studio .memory-hero::after {
+  display: none;
+}
+
+.memory-studio .memory-hero-badge {
+  display: inline-flex;
+  padding: 5px 10px;
+  border: 1px solid rgba(255, 253, 248, 0.35);
+  border-radius: 2px;
+  font-size: 0.62rem;
+  letter-spacing: 0.22em;
+  color: rgba(255, 253, 248, 0.92);
+  background: rgba(44, 36, 32, 0.22);
+}
+
+.memory-studio .beauty-hero h2 {
+  margin: 16px 0 10px;
+  max-width: none;
+  font-family: var(--memory-serif);
+  font-size: 1.55rem;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: 0.02em;
+}
+
+.memory-studio .beauty-hero p {
+  font-size: 0.84rem;
+  line-height: 1.7;
+  color: rgba(255, 253, 248, 0.88);
+}
+
+.memory-studio .primary-ghost {
+  background: #fffdf8;
+  color: var(--memory-ink);
+  border-radius: 2px;
+  padding: 0.65rem 1rem;
+  font-size: 0.82rem;
+  box-shadow: none;
+}
+
+.memory-studio .secondary-ghost {
+  background: transparent;
+  color: #fffdf8;
+  border: 1px solid rgba(255, 253, 248, 0.45);
+  border-radius: 2px;
+  padding: 0.65rem 1rem;
+  font-size: 0.82rem;
+}
+
+.memory-studio .beauty-surface {
+  max-width: none;
+  padding: 18px 14px;
+  border-radius: 6px;
+  background: var(--memory-paper);
+  border: 1px solid var(--memory-line);
+  box-shadow: 0 10px 28px rgba(44, 36, 32, 0.04);
+  backdrop-filter: none;
+}
+
+.memory-studio .mini-section-title h2,
+.memory-studio .mini-section-title h3 {
+  font-family: var(--memory-serif);
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.memory-studio .mini-section-title span {
+  color: var(--memory-muted);
+  letter-spacing: 0.08em;
+}
+
+.memory-studio .featured-card,
+.memory-studio .beauty-case-card,
+.memory-studio .mentor-card,
+.memory-studio .reservation-card,
+.memory-studio .mine-card,
+.memory-studio .mine-item {
+  border-radius: 4px;
+  background: var(--memory-paper);
+  border: 1px solid var(--memory-line);
+  box-shadow: none;
+}
+
+.memory-studio .featured-image,
+.memory-studio .case-thumb,
+.memory-studio .mentor-avatar,
+.memory-studio .mine-avatar {
+  border-radius: 4px;
+}
+
+.memory-studio .featured-image {
+  aspect-ratio: 4 / 5;
+}
+
+.memory-studio .price-tag {
+  background: rgba(139, 115, 85, 0.12);
+  border: 1px solid rgba(139, 115, 85, 0.22);
+  color: var(--memory-ink);
+  border-radius: 2px;
+}
+
+.memory-studio .tag-row span,
+.memory-studio .beauty-tag {
+  border-radius: 2px;
+  background: transparent;
+  border: 1px solid var(--memory-line);
+  color: var(--memory-muted);
+  font-size: 0.72rem;
+}
+
+.memory-studio .beauty-tag {
+  box-shadow: none;
+}
+
+.memory-studio .beauty-tag:hover {
+  transform: none;
+  border-color: var(--memory-accent-soft);
+  color: var(--memory-ink);
+}
+
+.memory-studio .poster-card {
+  border-radius: 4px;
+  min-height: 168px;
+}
+
+.memory-studio .poster-card::after {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.55));
+}
+
+.memory-studio .poster-card span {
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 0.64rem;
+}
+
+.memory-studio .poster-card strong {
+  font-family: var(--memory-serif);
+  font-weight: 600;
+}
+
+.memory-studio .beauty-highlight-item,
+.memory-studio .mine-stats div,
+.memory-studio .form-row {
+  border-radius: 4px;
+  background: #faf7f1;
+  border: 1px solid var(--memory-line);
+}
+
+.memory-studio .reservation-label {
+  background: rgba(139, 115, 85, 0.1);
+  color: var(--memory-accent);
+  border-radius: 2px;
+}
+
+.memory-studio .mine-item span:last-child {
+  color: var(--memory-muted);
+}
+
+@media (max-width: 720px) {
+  .memory-studio {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .memory-studio .memory-tabbar {
+    width: 100%;
+    left: 0;
+    transform: none;
+  }
+
+  .memory-studio .tab-chip {
+    font-size: 0.68rem;
+    padding: 0.4rem 0.1rem;
+  }
+
+  .memory-studio .beauty-hero h2 {
+    font-size: 1.35rem;
+  }
+}
+

@@ -84,13 +84,18 @@ function BeautyMiniProgramDemo() {
   const tabContent = {
     home: (
       <>
-        <section className="beauty-hero beauty-hero-home">
-          <div className="beauty-hero-badge">PROFESSIONAL BEAUTY CHANNEL</div>
-          <h2>让内容、课程、预约和产品，像一张高质感海报一样成交</h2>
-          <p>这个首页不是“展示壳”，而是承接流量、建立审美信任、推动咨询和下单的入口。</p>
+        <section
+          className="beauty-hero beauty-hero-home memory-hero"
+          style={{
+            backgroundImage: `linear-gradient(180deg, rgba(28, 24, 20, 0.08) 0%, rgba(28, 24, 20, 0.78) 100%), url(${beautyImages.featured})`,
+          }}
+        >
+          <div className="memory-hero-badge">STUDIO · MAKEUP</div>
+          <h2>把每一面妆容，留成一张会呼吸的影像</h2>
+          <p>参考留念影像的纸感留白与作品叙事，让案例、老师与预约在同一页自然流转。</p>
           <div className="beauty-hero-actions">
-            <button type="button" className="primary-ghost">立即预约</button>
-            <button type="button" className="secondary-ghost">查看案例</button>
+            <button type="button" className="primary-ghost">预约档期</button>
+            <button type="button" className="secondary-ghost">浏览作品</button>
           </div>
         </section>
 
@@ -262,16 +267,17 @@ function BeautyMiniProgramDemo() {
   } as const
 
   return (
-    <div className="beauty-demo-page">
+    <div className="beauty-demo-page memory-studio">
       <header className="beauty-topbar">
         <div>
-          <p className="eyebrow beauty-eyebrow">LUXE BEAUTY STUDIO</p>
-          <h1>轻奢美妆 Demo H5</h1>
+          <p className="eyebrow beauty-eyebrow">留念影像 · 妆造</p>
+          <h1>轻奢妆造 Studio</h1>
         </div>
-        <span className="topbar-pill">Mini Program Style</span>
       </header>
 
-      <nav className="beauty-tabbar panel">
+      <main className="beauty-main">{tabContent[activeTab]}</main>
+
+      <nav className="beauty-tabbar memory-tabbar" aria-label="页面导航">
         {(Object.keys(beautyTabLabels) as BeautyTab[]).map((tab) => (
           <button
             key={tab}
@@ -283,15 +289,13 @@ function BeautyMiniProgramDemo() {
           </button>
         ))}
       </nav>
-
-      {tabContent[activeTab]}
     </div>
   )
 }
 
 export default function App() {
   return (
-    <div className="app-shell">
+    <div className="app-shell beauty-route">
       <BeautyMiniProgramDemo />
     </div>
   )
