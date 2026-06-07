@@ -791,10 +791,7 @@ select {
   .section-head.compact,
   .account-item,
   .transaction-item,
-  .budget-top,
-  .beauty-case-card,
-  .mentor-card,
-  .mine-card {
+  .budget-top {
     flex-direction: column;
     align-items: flex-start;
   }
@@ -988,7 +985,7 @@ select {
   }
 }
 
-/* ── 留念影像风格：暖纸感 · 作品叙事 · 底部 Tab ── */
+/* ── 影像工作室风格：暖纸感 · 作品叙事 · 底部 Tab ── */
 
 .beauty-route {
   max-width: 430px;
@@ -1267,6 +1264,80 @@ body:has(.beauty-route) {
 }
 
 .memory-studio .mine-item span:last-child {
+  color: var(--memory-muted);
+}
+
+.memory-studio .teachers-panel,
+.memory-studio .booking-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.memory-studio .mentor-list {
+  display: grid;
+  gap: 10px;
+}
+
+.memory-studio .mentor-card {
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr);
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.memory-studio .mentor-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 4px;
+}
+
+.memory-studio .mentor-copy {
+  min-width: 0;
+}
+
+.memory-studio .teacher-showcase {
+  display: grid;
+  gap: 12px;
+  padding-top: 4px;
+  border-top: 1px solid var(--memory-line);
+}
+
+.memory-studio .teacher-poster {
+  min-height: 220px;
+}
+
+.memory-studio .booking-stack {
+  display: grid;
+  gap: 14px;
+}
+
+.memory-studio .booking-aside {
+  padding: 14px;
+  border-radius: 4px;
+  background: #faf7f1;
+  border: 1px solid var(--memory-line);
+}
+
+.memory-studio .mini-section-title.compact {
+  margin-bottom: 10px;
+}
+
+.memory-studio .reservation-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.memory-studio .reservation-copy {
+  min-width: 0;
+}
+
+.memory-studio .booking-note {
+  margin: 10px 0 0;
+  font-size: 0.78rem;
+  line-height: 1.6;
   color: var(--memory-muted);
 }
 

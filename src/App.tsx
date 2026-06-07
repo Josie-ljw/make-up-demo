@@ -92,7 +92,7 @@ function BeautyMiniProgramDemo() {
         >
           <div className="memory-hero-badge">STUDIO · MAKEUP</div>
           <h2>把每一面妆容，留成一张会呼吸的影像</h2>
-          <p>参考留念影像的纸感留白与作品叙事，让案例、老师与预约在同一页自然流转。</p>
+          <p>以纸感留白与作品叙事，让案例、老师与预约在同一页自然流转。</p>
           <div className="beauty-hero-actions">
             <button type="button" className="primary-ghost">预约档期</button>
             <button type="button" className="secondary-ghost">浏览作品</button>
@@ -174,12 +174,12 @@ function BeautyMiniProgramDemo() {
       </section>
     ),
     teachers: (
-      <section className="beauty-surface split-grid">
-        <div>
-          <div className="mini-section-title">
-            <h2>老师作品集</h2>
-            <span>专业背书</span>
-          </div>
+      <section className="beauty-surface teachers-panel">
+        <div className="mini-section-title">
+          <h2>老师作品集</h2>
+          <span>专业背书</span>
+        </div>
+        <div className="mentor-list">
           {beautyTabData.teachers.map((teacher) => (
             <article key={teacher.name} className="mentor-card">
               <img className="mentor-avatar" src={teacher.image} alt={teacher.name} loading="lazy" />
@@ -195,9 +195,9 @@ function BeautyMiniProgramDemo() {
             </article>
           ))}
         </div>
-        <div>
+        <div className="teacher-showcase">
           <div className="mini-section-title">
-            <h2>老师海报</h2>
+            <h2>精选海报</h2>
             <span>视觉包装</span>
           </div>
           <div className="poster-card teacher-poster" style={{ backgroundImage: `url(${beautyImages.teacherPoster})` }}>
@@ -213,27 +213,37 @@ function BeautyMiniProgramDemo() {
       </section>
     ),
     booking: (
-      <section className="beauty-surface">
+      <section className="beauty-surface booking-panel">
         <div className="mini-section-title">
           <h2>服务预约</h2>
           <span>直接转化</span>
         </div>
-        <div className="reservation-list">
-          {beautyTabData.booking.map((item) => (
-            <article key={item.label} className="reservation-card">
-              <div>
-                <p className="reservation-label">{item.price}</p>
-                <h3>{item.label}</h3>
-                <p>{item.desc}</p>
-              </div>
-              <button type="button" className="primary-ghost full">立即预约</button>
-            </article>
-          ))}
-        </div>
-        <div className="form-preview">
-          <div className="form-row"><span>预约日期</span><span>2026-06-08</span></div>
-          <div className="form-row"><span>预约时段</span><span>14:00 - 16:00</span></div>
-          <div className="form-row"><span>联系人</span><span>请输入姓名</span></div>
+        <div className="booking-stack">
+          <div className="reservation-list">
+            {beautyTabData.booking.map((item) => (
+              <article key={item.label} className="reservation-card">
+                <div className="reservation-copy">
+                  <p className="reservation-label">{item.price}</p>
+                  <h3>{item.label}</h3>
+                  <p>{item.desc}</p>
+                </div>
+                <button type="button" className="primary-ghost full">立即预约</button>
+              </article>
+            ))}
+          </div>
+          <aside className="booking-aside">
+            <div className="mini-section-title compact">
+              <h2>预约信息</h2>
+              <span>填写档期</span>
+            </div>
+            <div className="form-preview">
+              <div className="form-row"><span>预约日期</span><span>2026-06-08</span></div>
+              <div className="form-row"><span>预约时段</span><span>14:00 - 16:00</span></div>
+              <div className="form-row"><span>联系人</span><span>请输入姓名</span></div>
+              <div className="form-row"><span>联系电话</span><span>请输入手机号</span></div>
+            </div>
+            <p className="booking-note">提交后顾问将在 48 小时内确认档期，并发送到店 / 上门指引。</p>
+          </aside>
         </div>
       </section>
     ),
@@ -270,7 +280,7 @@ function BeautyMiniProgramDemo() {
     <div className="beauty-demo-page memory-studio">
       <header className="beauty-topbar">
         <div>
-          <p className="eyebrow beauty-eyebrow">留念影像 · 妆造</p>
+          <p className="eyebrow beauty-eyebrow">LUXE BEAUTY STUDIO</p>
           <h1>轻奢妆造 Studio</h1>
         </div>
       </header>
